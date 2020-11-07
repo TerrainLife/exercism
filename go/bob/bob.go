@@ -1,8 +1,6 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
-
-// Package bob should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
+/*
+Package bob implement Bob exercise solution in https://exercism.io/
+*/
 package bob
 
 import (
@@ -31,7 +29,7 @@ func categorizeRemark(remark string) int {
 	remark = strings.TrimSpace(remark)
 	isQuestion := strings.HasSuffix(remark, "?")
 	isYell := (strings.ToUpper(remark) == remark) && (strings.ToUpper(remark) != strings.ToLower(remark))
-	isEmpty := len(remark) == 0
+	isEmpty := remark == ""
 
 	if isEmpty {
 		return nothing
@@ -49,7 +47,7 @@ func categorizeRemark(remark string) int {
 	return other
 }
 
-// Hey should have a comment documenting it.
+// Hey is a Bob`s answer on remark
 func Hey(remark string) string {
 	return getAnswers()[categorizeRemark(remark)]
 }
