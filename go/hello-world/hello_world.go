@@ -1,5 +1,5 @@
 /*
-Package acronym implement Acronym exercise solution in https://exercism.io/
+Package greeting implement Acronym exercise solution in https://exercism.io/
 */
 package greeting
 
